@@ -1,0 +1,29 @@
+.container-home{
+    color: #fff;
+    padding: 80px 25px 15px 25px;
+    text-align: center;
+}
+.titulo {
+    font-size: 24px;
+}
+
+.subtitulo {
+    font-size: 15px;
+    line-height: 1.8;
+    padding: 10px 0 40px 0;
+}
+
+.button-principal{
+    color:#fff;
+    background-color: hsl(248, 32%, 49%);
+    font-size: 14px;
+    border: none;
+    padding: 15px 45px;
+    border-radius: 10px;
+    box-shadow: 3px 7px 0px 0px rgba(79,78,79,0.3);
+    cursor: pointer;
+}
+
+.button-enfasis {
+    font-weight: 700;
+}
