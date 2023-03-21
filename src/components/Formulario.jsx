@@ -33,59 +33,61 @@ const formik = useFormik({
     onSubmit: values => console.log(values)
 })
   return (
-    <form className="formulario" onSubmit={formik.handleSubmit}>
-        <div class="input-container">
-            <input 
-                name="name"
-                type="text"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.name}
-                placeholder="First Name"
-                className={formik.errors.name ? "input-error": "normal"}
-            />
-            {formik.touched.name && formik.errors.name ? <span className="error">{formik.errors.name}</span>: null}
-        </div>
-        <div class="input-container">
-            <input 
-                name="lastname"
-                type="text"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.lastname}
-                placeholder="Last Name"
-                className={formik.errors.lastname ? "input-error": "normal"}
-            />
-            {formik.touched.lastname && formik.errors.lastname ? <span className="error">{formik.errors.lastname}</span>: null}
-        </div>
-        <div class="input-container">
-            <input 
-                name="email"
-                type="email"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.email}
-                placeholder="Email"
-                className={formik.errors.email ? "input-error": "normal"}
-            />
-            {formik.touched.email && formik.errors.email ? <span className="error">{formik.errors.email}</span>: null}
-        </div>
-        <div class="input-container">
-            <input 
-                name="password"
-                type="password"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.password}
-                placeholder="Password"
-                className={formik.errors.password ? "input-error": "normal"}
-            />
-            {formik.touched.password && formik.errors.password ? <span className="error">{formik.errors.password}</span>: null}
-        </div>
-        <button type="submit" className="button-trial">CLAIM YOUR FREE TRIAL</button>
-        <label className="label">By clicking the button you are agreeing to our <span className="terms">Terms and Services</span></label>
-    </form>
-
+    <div className="container-form">
+        <button className="button-principal"><span className="button-enfasis">Try it free 7 days</span> then $20/mo. thereafter</button>  
+        <form className="formulario" onSubmit={formik.handleSubmit}>
+            <div class="input-container">
+                <input 
+                    name="name"
+                    type="text"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.name}
+                    placeholder="First Name"
+                    className={formik.errors.name ? "input-error": "normal"}
+                />
+                {formik.touched.name && formik.errors.name ? <span className="error">{formik.errors.name}</span>: null}
+            </div>
+            <div class="input-container">
+                <input 
+                    name="lastname"
+                    type="text"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.lastname}
+                    placeholder="Last Name"
+                    className={formik.errors.lastname ? "input-error": "normal"}
+                />
+                {formik.touched.lastname && formik.errors.lastname ? <span className="error">{formik.errors.lastname}</span>: null}
+            </div>
+            <div class="input-container">
+                <input 
+                    name="email"
+                    type="email"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.email}
+                    placeholder="Email"
+                    className={formik.errors.email ? "input-error": "normal"}
+                />
+                {formik.touched.email && formik.errors.email ? <span className="error">{formik.errors.email}</span>: null}
+            </div>
+            <div class="input-container">
+                <input 
+                    name="password"
+                    type="password"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.password}
+                    placeholder="Password"
+                    className={formik.errors.password ? "input-error": "normal"}
+                />
+                {formik.touched.password && formik.errors.password ? <span className="error">{formik.errors.password}</span>: null}
+            </div>
+            <button type="submit" className="button-trial">CLAIM YOUR FREE TRIAL</button>
+            <label className="label">By clicking the button you are agreeing to our <span className="terms">Terms and Services</span></label>
+        </form>
+    </div>
   )
 }
 export default Formulario

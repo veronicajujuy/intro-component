@@ -1,7 +1,13 @@
+.container-form{
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    gap: 35px;
+}
+
 .formulario {
     background-color: #fff;
     padding: 18px;
-    margin: 10px 25px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -71,3 +77,26 @@
     background-repeat: no-repeat; 
     background-position: bottom 13px right 15px; 
 }
+
+.button-principal{
+    color:#fff;
+    background-color: hsl(248, 32%, 49%);
+    font-size: 14px;
+    border: none;
+    padding: 20px 60px;
+    border-radius: 10px;
+    box-shadow: 3px 7px 0px 0px rgba(79,78,79,0.3);
+    cursor: pointer;
+}
+
+.button-enfasis {
+    font-weight: 700;
+}
+
+@media screen and (min-width: 1080px) {
+    .container-form{
+        max-width: 650px;
+        min-width: 550px;
+        margin-right: 80px;
+    }
+  }
