@@ -44,7 +44,7 @@ const formik = useFormik({
                     onBlur={formik.handleBlur}
                     value={formik.values.name}
                     placeholder="First Name"
-                    className={formik.errors.name ? "input-error": "normal"}
+                    className={formik.touched.name && formik.errors.name ? "input-error": "normal"}
                 />
                 {formik.touched.name && formik.errors.name ? <span className="error">{formik.errors.name}</span>: null}
             </div>
@@ -56,7 +56,7 @@ const formik = useFormik({
                     onBlur={formik.handleBlur}
                     value={formik.values.lastname}
                     placeholder="Last Name"
-                    className={formik.errors.lastname ? "input-error": "normal"}
+                    className={formik.touched.lastname && formik.errors.lastname ? "input-error": "normal"}
                 />
                 {formik.touched.lastname && formik.errors.lastname ? <span className="error">{formik.errors.lastname}</span>: null}
             </div>
@@ -68,7 +68,7 @@ const formik = useFormik({
                     onBlur={formik.handleBlur}
                     value={formik.values.email}
                     placeholder="Email"
-                    className={formik.errors.email ? "input-error": "normal"}
+                    className={formik.touched.email && formik.errors.email ? "input-error": "normal"}
                 />
                 {formik.touched.email && formik.errors.email ? <span className="error">{formik.errors.email}</span>: null}
             </div>
@@ -80,7 +80,7 @@ const formik = useFormik({
                     onBlur={formik.handleBlur}
                     value={formik.values.password}
                     placeholder="Password"
-                    className={formik.errors.password ? "input-error": "normal"}
+                    className={formik.touched.password && formik.errors.password ? "input-error": "normal"}
                 />
                 {formik.touched.password && formik.errors.password ? <span className="error">{formik.errors.password}</span>: null}
             </div>
